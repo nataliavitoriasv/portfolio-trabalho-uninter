@@ -1,0 +1,508 @@
+@charset "UTF-8";
+
+/* Estilos globais */
+* {
+    font-family: "K2D", sans-serif; /* Define a fonte padrão */
+    color: #ffffff; /* Cor do texto padrão */
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+body {
+    margin: 0 auto; /* Remove margens e centraliza o conteúdo */
+    max-width: 1337px; /* Define a largura máxima do corpo */
+    background: linear-gradient(150deg, #122030, #485c8d, #2d3958, #3F6487); /* Gradiente de fundo */
+    background-size: 120% 120%; /* Tamanho do fundo do gradiente */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    max-width: 100%; /* Largura total do cabeçalho */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    background-color: #101726; /* Cor de fundo do cabeçalho */
+    padding: 10px; /* Espaçamento interno */
+    line-height: 30px; /* Altura da linha */
+}
+
+hr {
+    margin: 0; /* Remove margem das linhas horizontais */
+}
+
+.cabecalho h1 {
+    font-size: 25px; /* Tamanho da fonte do título */
+    padding: 5px; /* Espaçamento interno */
+    margin: 15px 0; /* Margem do título */
+    color: #1FC0DA; /* Cor do título */
+}
+
+.cabecalho .logo-esquerda {
+    width: 30px; /* Largura da logo */
+    height: 30px; /* Altura da logo */
+    border-radius: 50%; /* Logo circular */
+    text-align: center; /* Alinha o texto no centro */
+    background-color: #7796F2; /* Cor de fundo da logo */
+    margin-right: 10px; /* Margem à direita */
+    margin-left: 60px; /* Margem à esquerda */
+    color: black; /* Cor do texto da logo */
+}
+
+.esquerda {
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente */
+}
+
+a.certificados {
+    justify-content: flex-start; /* Alinha itens no início */
+    margin-left: 10px; /* Margem à esquerda */
+    width: 40px; /* Largura do link */
+    height: 40px; /* Altura do link */
+}
+
+.cabecalho a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    display: flex; /* Usa flexbox para layout */
+}
+
+/* Efeitos de hover no menu e cabeçalho */
+.menu li a:hover,
+.cabecalho a:hover .logo-esquerda,
+.section-2 .redes-sociais a i:hover,
+button.btn-mostrar-projetos:hover {
+    color: #fff; /* Cor do texto ao passar o mouse */
+    text-shadow: 0 0 5px #fff; /* Sombra do texto ao passar o mouse */
+    transition: 0.4s; /* Transição suave para efeitos de hover */
+}
+
+/* Menu de navegação */
+nav.menu {
+    margin-right: 30px; /* Margem à direita do menu */
+}
+
+nav.menu ul li {
+    list-style: none; /* Remove marcadores de lista */
+    float: left; /* Alinha os itens horizontalmente */
+    padding: 0 50px; /* Espaçamento horizontal dos itens */
+}
+
+nav.menu li a {
+    color: #1FC0DA; /* Cor dos links no menu */
+    margin: 0; /* Remove margem dos links */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Seção 1 - Introdução */
+.section-1 .inicio {
+    display: flex; /* Usa flexbox para layout */
+    min-height: calc(100vh - 125px); /* Altura mínima da seção */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: center; /* Alinha itens horizontalmente */
+    gap: 50px; /* Espaçamento entre itens */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.section-1 .apresentacao1 {
+    padding: 0 0 0 100px; /* Espaçamento interno */
+    margin: 70px 0 0 0; /* Margem do título */
+    font-size: 70px; /* Tamanho da fonte */
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn1 4.5s ease forwards; /* Animação de fade-in */
+}
+
+@keyframes fadeIn1 {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Termina visível */
+    }
+}
+
+.section-1 .apresentacao2 {
+    padding: 0 0 0 100px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn2 4.5s ease forwards; /* Animação de fade-in */
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Termina visível */
+    }
+}
+
+.inicio .container-avatar {
+    max-width: 400px; /* Largura máxima do avatar */
+    border-radius: 50%; /* Avatar circular */
+    margin-right: 80px; /* Margem à direita */
+    position: relative; /* Posicionamento relativo para o gradiente */
+    overflow: hidden; /* Oculta o overflow */
+}
+
+.inicio .container-avatar::before {
+    content: ""; /* Cria um pseudo-elemento */
+    position: absolute; /* Posiciona o gradiente */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    border-radius: 50%; /* Gradiente circular */
+    background: linear-gradient(to right, #101726, #455587, #1FC0DA); /* Gradiente de fundo */
+    background-size: 180% 180%; /* Tamanho do fundo do gradiente */
+    animation: gradient-animation 5s ease infinite; /* Animação do gradiente */
+    z-index: 0; /* Posiciona atrás da imagem */
+}
+
+.inicio .container-avatar img {
+    width: 100%; /* Largura total da imagem */
+    border-radius: 50%; /* Imagem circular */
+    position: relative; /* Posiciona a imagem sobre o gradiente */
+    z-index: 1; /* Posiciona a imagem acima do gradiente */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Início da animação */
+    }
+    50% {
+        background-position: 100% 50%; /* Meio da animação */
+    }
+    100% {
+        background-position: 0% 50%; /* Fim da animação */
+    }
+}
+
+/* Seção 2 - Sobre Mim */
+.section-2 {
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    margin: 110px 0 150px 0; /* Margens superior e inferior */
+    padding-top: 60px; /* Espaçamento superior */
+    max-width: 100%; /* Largura máxima */
+}
+
+.section-2 h2 {
+    max-width: 100%; /* Largura máxima do título */
+    max-height: 100%; /* Altura máxima do título */
+    font-size: 40px; /* Tamanho da fonte */
+    font-weight: normal; /* Peso da fonte */
+    padding: 300px 50px 0 50px; /* Espaçamento interno */
+}
+
+.redes-sociais {
+    display: block; /* Exibe o bloco de redes sociais */
+}
+
+.section-2 .foto {
+    width: 300px; /* Largura da foto */
+    height: 300px; /* Altura da foto */
+    border: 10px solid #7796F2; /* Borda ao redor da foto */
+}
+
+.section-2 .redes-sociais {
+    display: flex; /* Usa flexbox para layout */
+    width: 320px; /* Largura do bloco de redes sociais */
+    left: 300px; /* Posiciona à esquerda */
+    bottom: 450px; /* Posiciona abaixo */
+}
+
+.section-2 .redes-sociais ul {
+    margin: 0; /* Remove margem da lista */
+    padding: 0; /* Remove padding da lista */
+}
+
+.section-2 .redes-sociais ul li {
+    float: left; /* Alinha itens horizontalmente */
+    list-style: none; /* Remove marcadores da lista */
+    margin: 20px 10px 0 10px; /* Margem dos itens */
+    background-color: #1FC0DA; /* Cor de fundo dos itens */
+    border-radius: 50px; /* Borda arredondada */
+}
+
+.section-2 .redes-sociais ul li a i {
+    padding: 20px; /* Espaçamento interno dos ícones das redes sociais */
+    color: #0A131E; /* Cor do ícone */
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    font-size: 20px; /* Tamanho da fonte do ícone */
+    text-align: center; /* Alinhamento do texto do ícone */
+}
+
+.section-2 p {
+    left: 650px; /* Posiciona o texto (apenas para contexto, normalmente não é usado assim em CSS) */
+    bottom: 900px; /* Posiciona o texto (apenas para contexto, normalmente não é usado assim em CSS) */
+    margin-bottom: 20px; /* Margem inferior do texto */
+    padding: 0px 0px 0px 50px; /* Espaçamento interno do texto */
+    width: 450px; /* Largura do texto */
+    font-family: "K2D", sans-serif; /* Fonte do texto */
+    font-size: 20px; /* Tamanho da fonte do texto */
+}
+
+/* Seção 3 - Formação Acadêmica */
+.section-3 {
+    gap: 50px; /* Espaçamento entre itens flexíveis */
+    padding: 10px; /* Espaçamento interno */
+    margin: 100px auto; /* Margem superior e inferior */
+}
+
+.section-3 h2 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    text-align: left; /* Alinha o título à esquerda */
+    font-weight: normal; /* Peso da fonte do título */
+    padding: 0px 0px 0px 100px; /* Espaçamento interno do título */
+    margin: 0px 0px 10px 0px; /* Margem do título */
+}
+
+.section-3 h3 {
+    color: #122030; /* Cor do subtítulo */
+    font-weight: bolder; /* Peso da fonte mais forte */
+}
+
+.section-3 p {
+    font-size: 20px; /* Tamanho da fonte do parágrafo */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-weight: normal; /* Peso da fonte do parágrafo */
+    margin: 0px; /* Remove margem do parágrafo */
+    color: #122030; /* Cor do texto do parágrafo */
+    text-align: center; /* Alinha o texto ao centro (isso sobrepõe o alinhamento à esquerda acima) */
+}
+
+.section-3 .bloco {
+    width: 500px; /* Largura do bloco */
+    height: 280px; /* Altura do bloco */
+}
+
+.section-3 .container-lista-hf ul {
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: center; /* Alinha itens horizontalmente */
+    background-color: #1FC0DA; /* Cor de fundo da lista */
+    border-radius: 40px; /* Bordas arredondadas */
+    margin: 50px 10px; /* Margem da lista */
+    padding: 100px; /* Espaçamento interno da lista */
+}
+
+.section-3 .container-lista-hf ul li {
+    list-style: none; /* Remove marcadores da lista */
+    font-size: 20px; /* Tamanho da fonte dos itens da lista */
+    font-weight: normal; /* Peso da fonte dos itens da lista */
+    text-align: center; /* Alinha texto ao centro */
+    align-items: center; /* Alinha itens verticalmente */
+    margin: 20px; /* Margem dos itens da lista */
+    transition: transform 500ms cubic-bezier(0.69, -0.55, 0.265, 1.55); /* Transição suave para efeitos de hover */
+}
+
+.section-3 .container-lista-hf img {
+    width: 80px; /* Largura da imagem */
+    height: 80px; /* Altura da imagem */
+    padding-top: 20px; /* Espaçamento interno superior */
+    padding-bottom: 20px; /* Espaçamento interno inferior */
+}
+
+/* Seção 4 - Projetos */
+.section-4 {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove decoração do texto */
+    padding: 10px; /* Espaçamento interno */
+    margin: 100px auto; /* Margem superior e inferior */
+}
+
+.section-4 h2 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    text-align: left; /* Alinha o título à esquerda */
+    font-weight: normal; /* Peso da fonte do título */
+    padding: 0px 0px 0px 100px; /* Espaçamento interno do título */
+    margin-bottom: 10px; /* Margem inferior do título */
+}
+
+.section-4 p {
+    display: block; /* Exibe o parágrafo como bloco */
+    font-size: 20px; /* Tamanho da fonte do parágrafo */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-weight: normal; /* Peso da fonte do parágrafo */
+    padding: 0px 0px 0px 100px; /* Espaçamento interno do parágrafo */
+    margin: 0px; /* Remove margem do parágrafo */
+}
+
+.section-4 .container-projetos {
+    display: flex; /* Usa flexbox para layout */
+    gap: 20px; /* Espaçamento entre projetos */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    margin-bottom: 20px; /* Margem inferior dos projetos */
+    justify-content: center; /* Alinha projetos ao centro */
+    width: 100%; /* Largura total */
+}
+
+.section-4 .projeto.ativo,
+.projeto-i {
+    text-align: center; /* Alinha o texto ao centro */
+    align-items: center; /* Alinha itens verticalmente */
+    width: 340px; /* Largura do projeto */
+    height: 700px; /* Altura do projeto */
+    margin: 80px 0px; /* Margem superior e inferior do projeto */
+}
+
+.section-4 .projeto a img,
+.projeto-i a img {
+    width: 250px; /* Largura da imagem do projeto */
+    height: 450px; /* Altura da imagem do projeto */
+    padding: 0px; /* Espaçamento interno da imagem */
+    margin: 30px auto; /* Margem da imagem */
+    border-radius: 15px; /* Bordas arredondadas da imagem */
+    align-items: center; /* Alinha a imagem verticalmente */
+    transition: transform 500ms cubic-bezier(0.69, -0.55, 0.265, 1.55); /* Transição suave para efeitos de hover */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre a imagem */
+    box-shadow: 1px 5px 10px black; /* Sombra da imagem */
+}
+
+.section-4 .projeto img:hover,
+.projeto-i img:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem ao passar o mouse */
+}
+
+.informacoes-projeto {
+    max-width: 400px; /* Largura máxima das informações do projeto */
+    height: 100px; /* Altura das informações do projeto */
+    padding: 0px 50px; /* Espaçamento interno das informações do projeto */
+}
+
+.section-4 .projeto {
+    display: block; /* Exibe o projeto como bloco */
+    width: 310px; /* Largura do projeto */
+}
+
+.section-4 h3 {
+    font-size: 25px; /* Tamanho da fonte do subtítulo do projeto */
+    margin: 0px; /* Remove margem do subtítulo do projeto */
+    color: #1FC0DA; /* Cor do subtítulo do projeto */
+    text-align: left; /* Alinha o subtítulo à esquerda */
+}
+
+.informacoes-projeto p {
+    font-size: 17px; /* Tamanho da fonte dos parágrafos nas informações do projeto */
+    padding: 0px; /* Remove padding dos parágrafos */
+    margin: 5px 0px; /* Margem dos parágrafos */
+}
+
+.section-4 .projeto.ativo .informacoes-projeto .tecnologias ul {
+    list-style: none; /* Remove marcadores da lista de tecnologias */
+    display: flex; /* Usa flexbox para layout */
+    padding: 0px; /* Remove padding da lista de tecnologias */
+    justify-content: left; /* Alinha a lista à esquerda */
+}
+
+.section-4 .projeto.ativo .informacoes-projeto a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+    display: flex; /* Exibe o link como flexível */
+    justify-content: left; /* Alinha o link à esquerda */
+}
+
+#portfolio .inativos {
+    display: none; /* Oculta projetos inativos */
+}
+
+.projeto-i h3 {
+    display: block; /* Exibe o subtítulo do projeto */
+}
+
+.section-4 .btn-mostrar-projetos {
+    background-color: #1FC0DA; /* Cor de fundo do botão */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: #182B41; /* Cor do texto */
+    width: 180px; /* Largura do botão */
+    padding: 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    margin: 100px auto 20px auto; /* Margem superior e inferior */
+    display: flex; /* Exibe como flexbox */
+    justify-content: center; /* Alinha o texto ao centro */
+    align-items: center; /* Alinha verticalmente */
+    cursor: pointer; /* Muda o cursor para pointer */
+    border: none; /* Remove a borda */
+}
+
+/* Oculta o botão se a classe .remover estiver presente */
+.section-4 .btn-mostrar-projetos.remover {
+    display: none; /* Não exibe o botão */
+}
+
+/* Animação de gradiente */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Início da animação */
+    }
+
+    50% {
+        background-position: 100% 50%; /* Meio da animação */
+    }
+
+    100% {
+        background-position: 0% 50%; /* Fim da animação */
+    }
+}
+
+/* Seção 5 - Formulário de Contato */
+.section-5 {
+  background-color: #182B41; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra do box */
+  max-width: 50%; /* Largura máxima */
+  margin: auto; /* Centraliza horizontalmente */
+}
+
+.section-5 h2 {
+  margin-top: 0; /* Remove a margem superior */
+  text-align: center; /* Centraliza o texto */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Margem inferior dos grupos de formulário */
+}
+
+.form-group label {
+  display: block; /* Exibe o rótulo como bloco */
+  margin-bottom: 5px; /* Margem inferior do rótulo */
+  font-weight: bold; /* Peso da fonte do rótulo */
+}
+
+.form-group input,
+.form-group textarea {
+  color: black;  /* Cor do texto digitado */
+  width: 100%; /* Largura total dos campos */
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite redimensionamento vertical */
+}
+
+.form-group button {
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove a borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para pointer */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.form-group button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Rodapé */
+footer p {
+    background-color: #101726; /* Cor de fundo do rodapé */
+    padding: 10px; /* Espaçamento interno */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Alinha o texto ao centro */
+    margin: 100px 0px 0px 0px; /* Margem superior */
+}

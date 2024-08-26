@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define as configurações de viewport para garantir a responsividade em dispositivos móveis -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Inclui o arquivo de estilos CSS principal -->
+    <link rel="stylesheet" href="css/responsivo.css"> <!-- Inclui o arquivo de estilos CSS para responsividade -->
+    <title>Certificações - Natália Vitória</title> <!-- Define o título da página que aparece na aba do navegador -->
+
+    <style>
+        /* Estilos para garantir que a altura da página ocupe todo o viewport */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            margin: 0; /* Remove as margens padrão */
+            padding: 0; /* Remove o preenchimento padrão */
+            display: flex; /* Usa flexbox para layout */
+            flex-direction: column; /* Organiza os itens do corpo em uma coluna */
+        }
+
+        /* Estilos específicos para a seção de PDF */
+        .pdf {
+            margin-bottom: 100px; /* Adiciona margem inferior para separar do rodapé */
+        }
+
+        /* Estilos para o elemento main para garantir que ocupe o espaço restante da página */
+        main {
+            flex: 1; /* Faz o elemento main crescer para ocupar o espaço restante */
+            padding-bottom: 60px; /* Adiciona preenchimento inferior para garantir que o conteúdo não sobreponha o rodapé */
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            position: absolute; /* Posiciona o rodapé de forma absoluta */
+            bottom: 0; /* Alinha o rodapé ao fundo da página */
+            width: 100%; /* Faz o rodapé ocupar a largura total da página */
+            background-color: #101726; /* Define a cor de fundo do rodapé */
+            color: #fff; /* Define a cor do texto do rodapé */
+            text-align: center; /* Centraliza o texto no rodapé */
+            margin: 0px; /* Remove a margem padrão */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Seção para exibir documentos PDF -->
+    <div class="pdf">
+        <iframe src="imagens/certificado_Projeto_de_Sistemas_Web.pdf" type="application/pdf"
+            width="100%" height="500"></iframe> <!-- Exibe o primeiro PDF -->
+        <iframe src="imagens/certificado-comunicacao-empresarial.pdf" type="application/pdf"
+            width="100%" height="500"></iframe> <!-- Exibe o segundo PDF -->
+        <iframe
+            src="imagens/Natalia-Vitoria-de-Souza-Vieira-Curso-HTML5-e-CSS3-modulo-1-de-5-40-HORAS-Certificado-Curso-em-Video.pdf#toolbar=0"
+            type="application/pdf" width="100%" height="500"></iframe> <!-- Exibe o terceiro PDF, com a barra de ferramentas oculta -->
+        <iframe src="imagens/imersao-alura-certificado.pdf" type="application/pdf" width="100%"
+            height="500"></iframe> <!-- Exibe o quarto PDF -->
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>Desenvolvido por Natália Vitória de Souza Vieira @2024</p> <!-- Texto do rodapé -->
+    </footer>
+
+</body>
+
+</html>

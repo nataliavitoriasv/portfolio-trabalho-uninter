@@ -1,0 +1,139 @@
+/* Media Query para telas com largura máxima de 1000px */
+@media only screen and (max-width: 1000px) {
+
+    /* Reduz o tamanho da fonte para telas menores */
+    body {
+        font-size: 14px;
+    }
+
+    /* Ajusta o cabeçalho para que os itens se alinhem verticalmente e centralize o conteúdo */
+    header.cabecalho {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    /* Centraliza os links dentro do cabeçalho */
+    header.cabecalho a {
+        margin: 0px auto; /* Remove margens laterais e centraliza horizontalmente */
+    }
+
+    /* Centraliza o menu de navegação */
+    nav.menu {
+        margin: 0px auto; /* Remove margens laterais e centraliza horizontalmente */
+    }
+
+    /* Ajusta o estilo da lista de navegação */
+    nav.menu ul {
+        margin: 14px auto; /* Margem superior e inferior ajustadas, centraliza horizontalmente */
+        width: 200px; /* Define a largura da lista */
+    }
+
+    /* Ajusta o espaçamento dos itens da lista de navegação */
+    nav.menu ul li {
+        padding: 10px; /* Adiciona preenchimento aos itens da lista */
+    }
+
+    /* Centraliza o texto dos títulos e parágrafos em várias seções */
+    .section-2 h2,
+    .section-2 p,
+    .section-3 h2,
+    .section-3 p,
+    .section-4 h2,
+    .section-4 p {
+        padding: 0px; /* Remove o preenchimento */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* SECTION-1 */
+    /* Alinha verticalmente e centraliza os itens na seção inicial */
+    .section-1 .inicio {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    /* Ajusta o estilo dos elementos de apresentação na seção inicial */
+    .section-1 .apresentacao1,
+    .section-1 .apresentacao2 {
+        padding: 0px; /* Remove o preenchimento */
+        margin: 0px; /* Remove as margens */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Ajusta a margem do avatar na seção inicial */
+    .section-1 .container-avatar {
+        margin-right: 0px; /* Remove a margem direita */
+        margin-bottom: 20px; /* Adiciona uma margem inferior */
+    }
+
+    /* SECTION-2 */
+    /* Ajusta a disposição e o alinhamento dos itens na seção 2 */
+    .section-2 {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        padding: 150px 10px 10px 10px; /* Adiciona preenchimento ao redor da seção */
+    }
+
+    /* Ajusta a largura máxima do parágrafo na seção 2 */
+    .section-2 p {
+        margin-right: 0px; /* Remove a margem direita */
+        max-width: 100%; /* Define a largura máxima como 100% */
+    }
+
+    /* Ajusta o estilo das fotos e redes sociais na seção 2 */
+    .foto-redes {
+        display: flex; /* Usa flexbox para layout */
+        max-width: 100%; /* Define a largura máxima como 100% */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    /* Ajusta o tamanho das imagens na seção 2 */
+    .section-2 .foto {
+        width: 200px; /* Define a largura da imagem */
+        height: 200px; /* Define a altura da imagem */
+    }
+
+    /* Ajusta o alinhamento das redes sociais na seção 2 */
+    .section-2 .redes-sociais {
+        left: auto; /* Remove o alinhamento à esquerda */
+        bottom: auto; /* Remove o alinhamento à parte inferior */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* SECTION-3 */
+    /* Ajusta o layout e o preenchimento da lista na seção 3 */
+    .section-3 .container-lista-hf ul {
+        padding: 10px 30px 60px 30px; /* Adiciona preenchimento ao redor da lista */
+        display: flex; /* Usa flexbox para layout */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    }
+
+    /* Ajusta o layout dos itens da lista na seção 3 */
+    .container-lista-hf ul li {
+        display: flex; /* Usa flexbox para layout */
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    /* Ajusta o tamanho das imagens na seção 3 */
+    .section-3 .container-lista-hf img {
+        width: 60px; /* Define a largura da imagem */
+        height: 60px; /* Define a altura da imagem */
+        padding-top: 10px; /* Adiciona preenchimento superior */
+    }
+
+    /* SECTION-4 */
+    /* Ajusta o layout dos projetos na seção 4 */
+    .section-4 .container-projetos {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        width: 100%; /* Define a largura como 100% */
+    }
+
+    /* Centraliza o texto dos títulos e informações de projeto na seção 4 e no rodapé */
+    .section-4 .informacoes-projeto h3,
+    footer p {
+        text-align: center; /* Centraliza o texto */
+        align-items: center; /* Centraliza os itens */
+    }
+}
